@@ -2,11 +2,11 @@
 Credit Card Fraud Analytics using Machine Learning Models
 Fraud is an uncommon, well-considered, imperceptibly concealed, time-evolving and often carefully organized crime which appears in many types of forms.
 Examples:
-> Credit card Fraud
-> Tax evasion
-> Insurance Fraud
-> Corruption
-> Money Laundering
+> Credit card Fraud,
+> Tax evasion,
+> Insurance Fraud,
+> Corruption,
+> Money Laundering,
 > Healthcare Fraud
 
 In the present day scenario, fraudulent activities associated with financial transactions, particularly while using credit card, are observed to be occurring in a fast rate. One of the recent researches estimates that governments around the world lose approximately US$500 to US$600 billion annually. Hence, a fraud detection system involving various detection techniques is very much essential for the financial institutions to sustain the goodwill from the customers. Several fraud detection techniques have been proposed by researchers with application of various neural networks algorithms to find the pattern of fraud. In this project, different simple classification models are combined to form an ensemble model to improve the performance.This project is a practical approach to classify credit card transactions as normal and fraudulent.
@@ -50,7 +50,17 @@ Step9:Calculate recall and precision of each algorithm by using confusion matrix
 
 <img width="249" alt="Before_resampling" src="https://user-images.githubusercontent.com/71324337/113470369-a7f58480-9472-11eb-92eb-c0f751482117.png">
 The dataset is too imbalanced so we need to perform Random Under Sampling (deletes examples from the majority class which is the normal transactions).
+After Undersampling the Data using NearMiss(0.8)
 <img width="555" alt="resampled_data" src="https://user-images.githubusercontent.com/71324337/113470313-4af9ce80-9472-11eb-8cfb-eea2320b023a.png">
+
+SYSTEM ARCHITECTURE
+<img width="800" alt="Methodology" src="https://user-images.githubusercontent.com/71324337/113470432-42ee5e80-9473-11eb-8189-701c9442c169.png">
+ENSEMBLE LEARNING
+Learn several simple models & combines their output to produce the final decision
+Better Precision than individual models
+<img width="490" alt="ensemble" src="https://user-images.githubusercontent.com/71324337/113470504-c8720e80-9473-11eb-80d2-dd92568fcad9.png">
+
+
 
 
 
