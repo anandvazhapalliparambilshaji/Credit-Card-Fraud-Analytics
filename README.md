@@ -58,9 +58,54 @@ SYSTEM ARCHITECTURE
 ENSEMBLE LEARNING
 Learn several simple models & combines their output to produce the final decision
 Better Precision than individual models
+
 <img width="490" alt="ensemble" src="https://user-images.githubusercontent.com/71324337/113470504-c8720e80-9473-11eb-80d2-dd92568fcad9.png">
 
+PARALLEL ENSEMBLE
+<img width="960" alt="Parallel ensemble" src="https://user-images.githubusercontent.com/71324337/113470590-577f2680-9474-11eb-8298-22aac54e3477.png">
+MAJORITY VOTING
+Majority voting is used in data classification, which involves a combined model with at least two algorithms. Each algorithm makes its own prediction for every test sample. The final output is for the one that receives the majority of the votes
+Here, we are using five models so 3 votes decides the majority
+Example: 3 models predict that the transaction is fraudulent then the model classify it as Fraudulent
+Note:Primarily it was six models then decides to go with Odd number of models(to aviod equal number of votes)
 
+VOTING ENSEMBLE
+<img width="375" alt="voting_ensemble" src="https://user-images.githubusercontent.com/71324337/113470678-0faccf00-9475-11eb-9fe9-656a98ff6a1f.png">
 
+Hard: the final class prediction is made by a majority vote — the estimator chooses the class prediction that occurs most frequently among the base models.
+Soft: the final class prediction is made based on the average probability calculated using all the base model predictions
+For example, if model 1 predicts the positive class with 70% probability, model 2 with 90% probability, then the Voting Ensemble will calculate that there is an 80%
+Custom weights can be used to calculate the weighted average
+PERFORMANCE EVALUATION
+Recall and Precision are measured to evaluate the model performance since accuracy cannot be a good indictor (fraud is uncommon)
+TP = True Positive
+Fraudulent transactions the model predicts as fraudulent.
+TN = True Negative
+Normal transactions the model predicts as normal.
+FP = False Positive
+Normal transactions the model predicts as fraudulent.
+FN = False Negative
+Fraudulent transactions the model predicts as normal
+CONFUSION MATRIX
+<img width="800" alt="Confusion Matrics" src="https://user-images.githubusercontent.com/71324337/113470709-484ca880-9475-11eb-86f1-4d181b9d5285.png">
 
+ROC CURVE
+<img width="390" alt="roc" src="https://user-images.githubusercontent.com/71324337/113470731-631f1d00-9475-11eb-9192-72aaf557af20.png">
+The AUC value lies between 0.5 to 1 where 0.5 denotes a bad classifer and 1 denotes an excellent classifier
+Here we are getting the value as .864 which is good
 
+CONCLUSION
+Finding fraudulent credit card transactions is important, but in the same time ,it is challenging because fraudster adapt and change their methods every now and then. 
+So, Capturing credit card fraud needs advanced fraud detecting machine learning models.
+Combining many machine model using a parallel ensemble model can improve model performance and avoid overfitting.
+
+REFERENCES
+1. https://www.kaggle.com/mlg-ulb/creditcardfraud
+
+2. S. GEE, Fraud and Fraud Detection A Data Analytics Approach. 2015
+
+3. I. Sadgali, N. Sael, and F. Benabbou, “Performance of machine learning techniques in the detection of financial frauds,” Procedia Comput. Sci., vol. 148, no. Icds 2018, pp. 45–54, 2019
+
+4. 	I. Sohony, R. Pratap, and U. Nambiar, “Ensemble learning for credit card fraud detection,” ACM Int. Conf. Proceeding Ser., no. January 2018, pp. 289–294, 2018, doi: 10.1145/3152494.3156815
+
+5. https://scikit-learn.org/stable/modules/ensemble.html
